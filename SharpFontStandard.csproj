@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.2</TargetFramework>
+    <AssemblyVersion>4.0.1.200</AssemblyVersion>
+    <Version>4.0.1</Version>
+    <Description>Cross-platform FreeType bindings for C#, ported to .NET Standard</Description>
+    <Company>Robmaister</Company>
+    <Product>SharpFont</Product>
+    <Copyright>Copyright (c) Robert Rouhani 2012-2016</Copyright>
+    <PackageProjectUrl>https://github.com/jmazouri/SharpFont</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/jmazouri/SharpFont/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/jmazouri/SharpFont</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <Authors>Robmaiser, Jmazouri</Authors>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\SharpFont.dll.config" Link="SharpFont.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\SharpFont.snk" Link="SharpFont.snk" />
+  </ItemGroup>
+
+</Project>
